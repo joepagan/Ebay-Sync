@@ -1,0 +1,109 @@
+{#
+/**
+ * Ebay Feed plugin for Craft CMS
+ *
+ * Ebay Feed Settings.twig
+ *
+ * @author    Joe Pagan
+ * @copyright Copyright (c) 2016 Joe Pagan
+ * @link      joe-pagan.com
+ * @package   EbayFeed
+ * @since     0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: 'Ebay User',
+    instructions: 'Enter the username for which you want to get the items for',
+    id: 'ebayUser',
+    name: 'ebayUser',
+    value: settings['ebayUser']})
+}}
+
+{{ forms.radioGroupField({
+        label: "Ebay App - Environment",
+        id: "ebayEnvironment",
+        name: "ebayEnvironment",
+        options: {
+            "production": "Production",
+            "sandbox": "Sandbox"
+        },
+        value: settings['ebayEnvironment']})
+}}
+
+{{ forms.radioGroupField({
+        label: "Ebay App - Call Type",
+        id: "ebayCallType",
+        name: "ebayCallType",
+        instructions: 'At the current time this only works with `GetSellerList`',
+        options: {
+            "GetSellerList": "GetSellerList",
+        },
+        value: settings['ebayCallType']})
+}}
+
+{{ forms.textField({
+    label: 'Ebay App - Production - DEVID',
+    instructions: '',
+    id: 'ebayProductionDevId',
+    name: 'ebayProductionDevId',
+    value: settings['ebayProductionDevId']})
+}}
+
+{{ forms.textField({
+    label: 'Ebay App - Production - APPID',
+    instructions: '',
+    id: 'ebayProductionAppId',
+    name: 'ebayProductionAppId',
+    value: settings['ebayProductionAppId']})
+}}
+
+{{ forms.textField({
+    label: 'Ebay App - Production - CertID',
+    instructions: '',
+    id: 'ebayProductionCertId',
+    name: 'ebayProductionCertId',
+    value: settings['ebayProductionCertId']})
+}}
+
+{{ forms.textField({
+    label: 'Ebay App - Production - UserToken',
+    instructions: '',
+    id: 'ebayProductionUserToken',
+    name: 'ebayProductionUserToken',
+    value: settings['ebayProductionUserToken']})
+}}
+
+{{ forms.textField({
+    label: 'Ebay App - Sandbox - DEVID',
+    instructions: '',
+    id: 'ebaySandboxDevId',
+    name: 'ebaySandboxDevId',
+    value: settings['ebaySandboxDevId']})
+}}
+
+{{ forms.textField({
+    label: 'Ebay App - Production - APPID',
+    instructions: '',
+    id: 'ebaySandboxAppId',
+    name: 'ebaySandboxAppId',
+    value: settings['ebaySandboxAppId']})
+}}
+
+{{ forms.textField({
+    label: 'Ebay App - Production - CertID',
+    instructions: '',
+    id: 'ebaySandboxCertId',
+    name: 'ebaySandboxCertId',
+    value: settings['ebaySandboxCertId']})
+}}
+
+{{ forms.textField({
+    label: 'Ebay App - Production - UserToken',
+    instructions: '',
+    id: 'ebaySandboxUserToken',
+    name: 'ebaySandboxUserToken',
+    value: settings['ebaySandboxUserToken']})
+}}
